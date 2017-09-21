@@ -273,9 +273,9 @@ class RRNotificationView:UIView{
         }
         
         viewHolder.addSubview(viewHolderTop)
-        viewHolderTop.addSubview(imageView)
-        viewHolderTop.addSubview(labelApp)
-        viewHolderTop.addSubview(labelTime)
+        viewHolderTop.contentView.addSubview(imageView)
+        viewHolderTop.contentView.addSubview(labelApp)
+        viewHolderTop.contentView.addSubview(labelTime)
         
         
         viewHolderTop.addConstraintsWithFormat(format: "H:|-8-[v0(\(imageViewWidth))]-8-[v1]-(>=8)-[v2]-8-|", views: imageView,labelApp,labelTime,options:[.alignAllCenterY])
@@ -285,9 +285,9 @@ class RRNotificationView:UIView{
         
         viewHolder.addSubview(viewHolderBottom)
         
-        viewHolderBottom.addSubview(labelTitle)
-        viewHolderBottom.addSubview(labelSubTitle)
-        viewHolderBottom.addSubview(buttonClose)
+        viewHolderBottom.contentView.addSubview(labelTitle)
+        viewHolderBottom.contentView.addSubview(labelSubTitle)
+        viewHolderBottom.contentView.addSubview(buttonClose)
         
         
         
